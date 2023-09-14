@@ -1,15 +1,38 @@
 class node {
-    constructor(value = null, next = null) {
-        return value, next;
+    constructor(value) {
+        this.value = value;
+        this.next = null;
     }
 }
 
-class nodeList {
-    constructor (list = []) {
-        return list;
+class linkedList {
+    constructor (head = null) {
+        this.head = head;
     }
 }
 
+let node1 = new node(2)
+let node2 = new node(6)
+let node3 = new node(4)
+let node4 = new node(43)
 
-console.log(new nodeList)
+node1.next = node2
+node2.next = node3
+node3.next = node4
 
+let list = new linkedList(node1)
+
+function size () {
+    let count = 0;
+    let current = list.head;
+
+    while (current !== null) {
+        count++
+        current = current.next;
+    }
+    return count;
+}
+
+let count = size();
+
+console.log(count);
