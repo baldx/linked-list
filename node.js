@@ -36,3 +36,7 @@ function size () {
 let count = size();
 
 console.log(count);
+
+function clear() {
+    list = null;
+}
