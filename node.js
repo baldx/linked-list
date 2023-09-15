@@ -33,8 +33,6 @@ function size () {
     return count;
 }
 
-console.log(size());
-
 function clear() {
     list = null;
 }
@@ -53,4 +51,17 @@ function declareLast () {
     return lastNode;
 }
 
-console.log(declareLast());
+function append (value) {
+    let newNode = new node(value);
+    let current = list.head;
+    if (current === null) {
+        current = newNode;
+    } else {
+        while (current.next !== null) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+    return newNode;
+}
+
