@@ -43,3 +43,14 @@ function declareHead () {
     return list.head;
 }
 
+function declareLast () {
+    let lastNode = list.head;
+    if (lastNode) {
+        while (lastNode.next) {
+            lastNode = lastNode.next;
+        }
+    }
+    return lastNode;
+}
+
+console.log(declareLast());
