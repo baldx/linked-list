@@ -86,4 +86,17 @@ function getIndex (index) {
     return current;
 }
 
-console.log(getIndex(2));
+function removeNode () {
+    let current = list.head;
+    if (current === null) {
+        return null;
+    } else {
+        while (current.next !== null) {
+            current = current.next;
+        }
+    }
+    
+    return current = null;
+}
+
+console.log(removeNode());
