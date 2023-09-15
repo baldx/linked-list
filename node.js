@@ -73,3 +73,17 @@ function prepend (value) {
     return newNode;
 }
 
+function getIndex (index) {
+    let current = list.head;
+    let count = 0;
+
+    if (index < 0 || index <= list.length) return null;
+
+    while (count < index) {
+        current = current.next;
+        count++;
+    }
+    return current;
+}
+
+console.log(getIndex(2));
