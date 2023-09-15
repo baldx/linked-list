@@ -65,3 +65,11 @@ function append (value) {
     return newNode;
 }
 
+function prepend (value) {
+    let newNode = new node(value);
+    let current = list.head;
+    current = newNode;
+
+    return newNode;
+}
+
