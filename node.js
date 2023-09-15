@@ -33,10 +33,13 @@ function size () {
     return count;
 }
 
-let count = size();
-
-console.log(count);
+console.log(size());
 
 function clear() {
     list = null;
 }
+
+function declareHead () {
+    return list.head;
+}
+
