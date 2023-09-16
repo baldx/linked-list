@@ -138,4 +138,23 @@ function find (value) {
     }
 }
 
-console.log(find(6));
+function convertToString () {
+    let current = list.head;
+    let result = "";
+
+    if (current === null) {
+        return console.log(current);;
+    } else {
+        while (current !== null) {
+            result += current.value;
+
+            if (current.next !== null) {
+                result += " -> ";
+            } else if ( current.next === null) {
+                result += ` -> ${null}`
+            }
+            current = current.next
+        }
+        return result;
+    }
+}
