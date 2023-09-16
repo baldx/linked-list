@@ -94,9 +94,28 @@ function removeNode () {
         while (current.next !== null) {
             current = current.next;
         }
+        current = null;
     }
-    
-    return current = null;
+    return list;
 }
 
-console.log(removeNode());
+function contains (value) {
+    let current = list.head;
+
+    if (current === null) {
+        return false;
+    } else {
+        while (current !== null) {
+            
+            if (current.value === value) {
+                return true;
+            }
+
+            current = current.next;
+        }
+        return false;
+    }
+}
+
+
+console.log(contains(44));
