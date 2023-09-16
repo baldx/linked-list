@@ -158,3 +158,15 @@ function convertToString () {
         return result;
     }
 }
+
+function insertNode (value, index) {
+    let current = list.head;
+
+    if (index < 0) return "Invalid index"
+
+    let newNode = node(value);
+
+    if (index === 0) {
+        newNode = current;
+    }
+}
