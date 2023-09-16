@@ -118,4 +118,24 @@ function contains (value) {
 }
 
 
-console.log(contains(44));
+function find (value) {
+    let current = list.head;
+    let count = 0;
+
+    if (current === null) {
+        return null;
+    } else {
+        while (current !== null) {
+
+            count++;
+
+            if (current.value === value) {
+                return count;
+            }
+
+            current = current.next;
+        }
+    }
+}
+
+console.log(find(6));
