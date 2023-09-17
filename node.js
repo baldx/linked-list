@@ -192,5 +192,19 @@ function insertNode (value, index) {
     return "Node with value " + value + " inserted at index "+ index;
 }
 
-console.log(insertNode("apple", 2));
-console.log(size());
+function removeAt(index) {
+
+    if (index < 0) return "Cant remove negative index"
+
+    let current = list.head;
+    let prev = null;
+
+     if (index === 0) {
+        list.head = list.head.next;
+        
+        return "Head of link removed";
+     }
+}
+
+console.log(removeAt(0));
+console.log(list);
