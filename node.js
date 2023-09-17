@@ -159,14 +159,38 @@ function convertToString () {
     }
 }
 
+
 function insertNode (value, index) {
-    let current = list.head;
 
     if (index < 0) return "Invalid index"
 
-    let newNode = node(value);
+    let newNode = new node(value);
 
     if (index === 0) {
-        newNode = current;
+        newNode.next = list.head;
+        list.head = newNode;
+        return "Node with value " + value + " inserted at index "+ index;
+    } else {
+        let current = list.head;
+        let prev = null;
+        let count = 0;
+
+        while (current !== null && count < index) {
+            prev = current;
+            current = current.next;
+            count++;
+        }
+
+        if (count < index) {
+            return "Out of range2"
+        }
+
+        prev.next = newNode;
+        newNode.next = current;
     }
+
+    return "Node with value " + value + " inserted at index "+ index;
 }
+
+console.log(insertNode("apple", 2));
+console.log(size());
