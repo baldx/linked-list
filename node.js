@@ -196,15 +196,29 @@ function removeAt(index) {
 
     if (index < 0) return "Cant remove negative index"
 
-    let current = list.head;
-    let prev = null;
-
-     if (index === 0) {
+    if (index === 0) {
         list.head = list.head.next;
-        
+
         return "Head of link removed";
-     }
+    } else {
+
+        let current = list.head;
+        let prev = null;
+        let count = 0;
+
+        while (current !== null && count <= index) {
+            prev = current;
+            current = current.next;
+            count++;
+        }
+
+        if (count < index) return "Index too big"
+        else if (current !== null) {
+            prev.next = current.next;
+            return "Node at index " + index + " removed";
+        } else {
+            return "Node not found"
+        }
+    }
 }
 
-console.log(removeAt(0));
-console.log(list);
