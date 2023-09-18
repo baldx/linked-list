@@ -40,7 +40,9 @@ function clear() {
 }
 
 function declareHead () {
-    return list.head;
+    let current = list.head
+
+    return current;
 }
 
 function declareLast () {
@@ -69,8 +71,8 @@ function append (value) {
 
 function prepend (value) {
     let newNode = new node(value);
-    let current = list.head;
-    current = newNode;
+    newNode.next = list.head;
+    list.head = newNode
 
     return newNode;
 }
@@ -225,4 +227,9 @@ function removeAt(index) {
 }
 
 console.log(size()); // 4
-console.log(clear()) // 
+// console.log(clear()); // null
+console.log(declareHead()); // value: 2, next: node {...}
+console.log(declareLast()); // value: 43, next: null
+console.log(append("apple")); // value: apple, next: null
+console.log(prepend("pear")); 
+console.log(list);
