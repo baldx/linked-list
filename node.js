@@ -134,7 +134,7 @@ function find (value) {
             count++;
 
             if (current.value === value) {
-                return count;
+                return "Value found at index " + count;
             }
 
             current = current.next;
@@ -230,6 +230,12 @@ console.log(size()); // 4
 // console.log(clear()); // null
 console.log(declareHead()); // value: 2, next: node {...}
 console.log(declareLast()); // value: 43, next: null
-console.log(append("apple")); // value: apple, next: null
-console.log(prepend("pear")); 
-console.log(list);
+console.log(append("apple")); // value: "apple", next: null
+console.log(prepend("pear")); // Value: "pear", next: node {...}
+console.log(getIndex(4)); // value: 43, next: node {...}
+console.log(removeNode(1)); // removes last node
+console.log(contains("pear")); // true
+console.log(find("pear")); // Value found at index 1
+console.log(convertToString()); // pear -> 2 -> 6 -> 4 -> 43 -> apple -> null 
+console.log(insertNode("banana", 2)); // Node with value banana inserted at index 2
+console.log(removeAt(2));
