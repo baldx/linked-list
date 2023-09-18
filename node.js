@@ -227,7 +227,7 @@ function removeAt(index) {
 }
 
 console.log(size()); // 4
-// console.log(clear()); // null
+// console.log(clear()) // null
 console.log(declareHead()); // value: 2, next: node {...}
 console.log(declareLast()); // value: 43, next: null
 console.log(append("apple")); // value: "apple", next: null
@@ -238,4 +238,4 @@ console.log(contains("pear")); // true
 console.log(find("pear")); // Value found at index 1
 console.log(convertToString()); // pear -> 2 -> 6 -> 4 -> 43 -> apple -> null 
 console.log(insertNode("banana", 2)); // Node with value banana inserted at index 2
-console.log(removeAt(2));
+console.log(removeAt(2)); // Node at index 2 removed
