@@ -35,6 +35,8 @@ function size () {
 
 function clear() {
     list = null;
+    
+    return list;
 }
 
 function declareHead () {
@@ -222,3 +224,5 @@ function removeAt(index) {
     }
 }
 
+console.log(size()); // 4
+console.log(clear()) // 
